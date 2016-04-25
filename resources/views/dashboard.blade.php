@@ -7,7 +7,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">Profile</div>
               <div class="panel-body">
-                <img src="" class="img-circle" width="200" height="200">
+                <img src="{{ $Image_url }}" class="img-circle" width="200" height="200">
                 <h3>{{ Auth::user()->name }}</h3>
                 <h5>{{ Auth::user()->email }}</h5>
                 <hr>

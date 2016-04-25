@@ -20,11 +20,6 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/dashboard',function() {
+Route::any('/user/{user}/profile-pic', 'BloggerDashboard@get_profile_pic');
 
-       $Image = Auth::user()->profile_pic;
-       $type = 'image/jpeg';
-       $rep = response($Image)->header('Content-Type', $type);
-
-       return view('/dashboard', ['img' => $rep]);
-     });
+Route::get('/dashboard', 'BloggerDashboard@display_profile_pic');
